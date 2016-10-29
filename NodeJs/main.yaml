@@ -1,6 +1,0 @@
----
-- hosts: vag
-  remote_user: vagrant
-  tasks:
-    - include: install.yaml
-    -
