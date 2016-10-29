@@ -1,0 +1,14 @@
+[vag]
+192.168.33.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
+
+[msr-api-prod]
+192.168.33.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
+
+[msr-api-redis]
+192.168.33.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
+
+[msr-api-prod:vars]
+192.168.33.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
+
+[msr-api-redis:vars]
+192.168.33.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant

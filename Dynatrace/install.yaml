@@ -1,0 +1,16 @@
+---
+    - name: make a install file save folder
+      sudo: yes
+      file: path=/opt/AnsibleTemp/InstallSave/Dynatrace state=directory
+
+    - name: download dynatrace client
+      sudo: yes
+      shell: wget --no-check-certificate -O Dynatrace-OneAgent-Linux-1.103.237.sh https://yor583.dynatrace-managed.com/e/a8fee25e-45b3-4052-97b0-3b0019aedc06/installer/agent/unix/latest/o9MvrGcpcX0p6DzV/a8fee25e-45b3-4052-97b0-3b0019aedc06
+      args:
+        chdir: "/opt/AnsibleTemp/InstallSave/Dynatrace"
+
+    - name: install clinet
+      sudo: yes
+      shell: /bin/sh Dynatrace-OneAgent-Linux-1.103.237.sh APP_LOG_CONTENT_ACCESS=1
+      args:
+        chdir: "/opt/AnsibleTemp/InstallSave/Dynatrace"

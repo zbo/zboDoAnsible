@@ -1,0 +1,17 @@
+---
+    - name: make a install file save folder
+      sudo: yes
+      file: path:/opt/AnsibleTemp/InstallSave/Dynatrace state=directory
+
+    - name: back up current repo file
+      sudo: yes
+      shell: "mv /etc/yum.repos.d/* ."
+      args:
+        chdir: "/opt/AnsibleTemp/InstallSave/YumRepo"
+
+    - name: download ali repo file
+      sudo: yes
+      shell: wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+      args:
+        chdir: "/etc/yum.repos.d"
+
