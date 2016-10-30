@@ -2,13 +2,17 @@
 192.168.33.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
 
 [msr-api-prod]
-192.168.33.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
+192.168.33.11 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
 
 [msr-api-redis]
-192.168.33.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
+192.168.33.12 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
+
+
+[vag:vars]
+restart_cmd="echo 'nothing to do'"
 
 [msr-api-prod:vars]
-192.168.33.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
+restart_cmd="slc softrestart"
 
 [msr-api-redis:vars]
-192.168.33.10 ansible_ssh_user=vagrant ansible_ssh_pass=vagrant ansible_sudo_pass=vagrant
+restart_cmd="service redis restart"

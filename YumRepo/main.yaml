@@ -15,6 +15,6 @@
 
     - name: download ali repo file
       sudo: yes
-      shell: wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo
+      shell: "wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo"
       args:
         chdir: "/etc/yum.repos.d"
