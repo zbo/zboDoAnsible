@@ -1,4 +1,4 @@
 #!/bin/bash
 PWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-ansible-playbook -i hosts main.yaml -vvvvv
+ansible-playbook -i hosts main.yaml --ask-vault-pass -vvvvv

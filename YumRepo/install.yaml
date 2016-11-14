@@ -1,7 +1,0 @@
----
-    - name: make a install file save folder
-      sudo: yes
-      file: path:/opt/AnsibleTemp/InstallSave/Dynatrace state=directory
-
-
-

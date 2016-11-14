@@ -9,7 +9,7 @@
 
     - name: back up current repo file
       sudo: yes
-      shell: "if [ -f './CentOS-Base.repo' ]; then echo 'do nothing'; else echo 'moving'&& mv /etc/yum.repos.d/* .; fi"
+      shell: "if [ -f './CentOS-Base.repo' ]; then echo 'rm -rf /etc/yum.repos.d/*'; else echo 'moving'&& mv /etc/yum.repos.d/* .; fi"
       args:
         chdir: "/opt/AnsibleTemp/InstallSave/YumRepo"
 
